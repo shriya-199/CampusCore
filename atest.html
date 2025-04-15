@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Campus Core</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #2563eb, #1e40af);
+      color: white;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    .logo {
+      font-size: 2rem;
+      color: blanchedalmond;
+      text-decoration: none;
+      font-weight: bolder;
+      font-family: cursive;
+      margin-left: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .login-btn {
+      padding: 0.5rem 1.2rem;
+      border: 2px solid white;
+      border-radius: 8px;
+      background-color: #1e40af;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background-color: white;
+      color: #1e40af;
+    }
+
+    .about-section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #f0f4f8;
+    }
+
+    .about-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .team-section {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: white;
+    }
+
+    .team-section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .team-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .team-card {
+      background-color: #f0f4f8;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .team-card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .team-card h4 {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .footer {
+      background-color: #111827;
+      color: white;
+      padding: 3rem 2rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .footer-grid h3,
+    .footer-grid h4 {
+      margin-bottom: 1rem;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-grid a {
+      color: #cbd5e0;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-grid a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="home.html" class="logo">CampusCore</a>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="atest.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="index.php" class="login-btn">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="about-section">
+    <h1>About Campus Core</h1>
+    <p>Campus Core is your ultimate academic companion. Our mission is to simplify and enhance course management for students and educators alike. From organizing courses and tracking grades to collaborating with peers, Campus Core provides a powerful and intuitive platform that empowers your academic success.</p>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="pic3.webp" alt="Rupesh" height="200">
+        <h4>Rupesh</h4>
+        <p>Founder & Product Lead</p>
+      </div>
+      <div class="team-card">
+        <img src="pic4.webp" alt="Shiva" height="200">
+        <h4>Shiva</h4>
+        <p>Frontend Developer</p>
+      </div>
+      <div class="team-card">
+        <img src="pic1.webp" alt="Jaya" height="200">
+        <h4>Jaya</h4>
+        <p>UX Designer</p>
+      </div>
+      <div class="team-card">
+        <img src="pic2.png" alt="Shriya" height="200">
+        <h4>Shriya</h4>
+        <p>Backend Engineer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Campus Core</h3>
+        <p>Empowering students to achieve academic excellence through innovative tools.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 Campus Core. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

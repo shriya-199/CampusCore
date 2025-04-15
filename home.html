@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Core</title>
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #2563eb, #1e40af);
+  color: white;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.logo{
+  font-size: 2rem;
+  color:blanchedalmond;
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: cursive;
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+
+.login-btn {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: #1e40af;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: #1e40af;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #1e3a8a;
+  padding: 1rem;
+}
+
+.mobile-menu a {
+  display: block;
+  color: white;
+  margin: 0.5rem 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, rgba(59,130,246,0.9), rgba(16,185,129,0.9)),
+              url('assets/images/hero-bg.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero .highlight {
+  color: #c7d2fe;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.8rem 2rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e3a8a;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Features */
+.features-section {
+  padding: 4rem 2rem;
+  background-color: #f0f4f8;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.features-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.feature-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+}
+
+/* Stats Section */
+.stats-section {
+  background-color: #2563eb;
+  color: white;
+  padding: 3rem 2rem;
+  font-size: 1.8rem;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+  
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-section p {
+  max-width: 600px;
+  margin: 1rem auto 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #111827;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.footer-grid h3,
+.footer-grid h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-grid ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-grid a {
+  color: #cbd5e0;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-grid a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+</style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="home.html" class="logo">CampusCore</a>
+      <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="atest.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="index.php" class="login-btn">Login</a>
+      </div>
+      
+    </div>
+
+    <!-- <div id="mobileMenu" class="mobile-menu">
+      <a href="home.html">Home</a>
+      <a href="test.html">About Us</a>
+      <a href="#">Contact Us</a>
+      <a href="index.php" class="login-btn">Login</a>
+    </div> -->
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Elevate Your <span class="highlight">Academic Success</span></h1>
+      <div class="hero-buttons">
+        <a href="index.php" class="btn-primary">Get Started</a>
+        <a href="#features" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section id="features" class="features-section">
+    <div class="section-header">
+      <span>POWERFUL FEATURES</span>
+      <h2>Everything You Need to Succeed</h2>
+      <p>Our platform provides comprehensive tools to track and improve your academic journey.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Course Management</h3>
+        <p>Organize and track all your academic courses with intuitive dashboards.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Grade Analytics</h3>
+        <p>Visualize your performance trends and predict future outcomes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Smart Planner</h3>
+        <p>Never miss deadlines with our intelligent scheduling system.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Collaboration</h3>
+        <p>Connect with classmates and instructors seamlessly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div><h4>10K+</h4><p>Active Students</p></div>
+      <div><h4>95%</h4><p>Satisfaction Rate</p></div>
+      <div><h4>24/7</h4><p>Support Available</p></div>
+      <div><h4>4.9</h4><p>Average Rating</p></div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2>Ready to Transform Your Academic Journey?</h2>
+    <p>Join thousands of students who are already achieving better results with our platform.</p>
+    <a href="index.php" class="btn-primary">Start Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Campus Core</h3>
+        <p>Empowering students to achieve academic excellence through innovative tools.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Updates</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Guides</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2024 Campus Core. All rights reserved.
+    </div>
+  </footer>
+
+  <script>// Toggle mobile menu
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      const menu = document.getElementById('mobileMenu');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+    
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('themeToggle');
+    const themeToggleMobile = document.getElementById('themeToggleMobile');
+    
+    function toggleTheme() {
+      const root = document.documentElement;
+      if (root.classList.contains('dark')) {
+        root.classList.remove('dark');
+        localStorage.theme = 'light';
+      } else {
+        root.classList.add('dark');
+        localStorage.theme = 'dark';
+      }
+    }
+    
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+    
+    if (localStorage.theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    </script>
+</body>
+</html>
